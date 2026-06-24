@@ -1,98 +1,105 @@
-backend:
-  name: git-gateway
-  branch: main
+Bu hata tamamen gizli bosluk karakterleri ve girinti uyusmazligindan kaynaklaniyor. config.yml dosyasinin icini tamamen sil ve asagidaki kodu yapistir. Bosluk hatalarinin tekrarlanmamasi amaciyla ayni islevi goren JSON tabanli yapiyi kurdum.
 
-media_folder: "images"
-public_folder: "/images"
+```json
+{
+  "backend": {
+    "name": "git\u002dgateway",
+    "branch": "main"
+  },
+  "media_folder": "images",
+  "public_folder": "/images",
+  "collections": [
+    {
+      "name": "projects",
+      "label": "Works (Projects)",
+      "files": [
+        {
+          "label": "Project List",
+          "name": "project_list",
+          "file": "_data/projects.json",
+          "format": "json",
+          "fields": [
+            {
+              "label": "Projects",
+              "name": "projects",
+              "widget": "list",
+              "label_singular": "Project",
+              "summary": "{{fields.title}}",
+              "fields": [
+                { "label": "Title", "name": "title", "widget": "string" },
+                { "label": "Vimeo ID", "name": "vimeoId", "widget": "string" },
+                { "label": "Custom Thumbnail URL", "name": "thumbnail", "widget": "string", "required": false }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "about",
+      "label": "About Page",
+      "files": [
+        {
+          "label": "About Page Content",
+          "name": "about_content",
+          "file": "_data/about.json",
+          "format": "json",
+          "fields": [
+            { "label": "Profile Photo", "name": "profile_image", "widget": "image", "required": false },
+            { "label": "Biography Text", "name": "bio_copy", "widget": "text" },
+            {
+              "label": "Education",
+              "name": "education",
+              "widget": "list",
+              "fields": [
+                { "label": "Degree/Title", "name": "title", "widget": "string" },
+                { "label": "Institution", "name": "institution", "widget": "string" },
+                { "label": "Year", "name": "year", "widget": "string" }
+              ]
+            },
+            {
+              "label": "Awards",
+              "name": "awards",
+              "widget": "list",
+              "fields": [
+                { "label": "Award Title", "name": "title", "widget": "string" },
+                { "label": "Festival/Organization", "name": "organization", "widget": "string" }
+              ]
+            },
+            {
+              "label": "References",
+              "name": "references",
+              "widget": "list",
+              "fields": [
+                { "label": "Name", "name": "name", "widget": "string" },
+                { "label": "Company Role", "name": "company_role", "widget": "string" },
+                { "label": "Email", "name": "email", "widget": "string" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "label": "SEO & General Settings",
+      "files": [
+        {
+          "label": "Site Settings",
+          "name": "site_settings",
+          "file": "_data/settings.json",
+          "format": "json",
+          "fields": [
+            { "label": "Site Title (SEO)", "name": "site_title", "widget": "string" },
+            { "label": "Site Description (SEO)", "name": "site_description", "widget": "text", "hint": "Google arama sonuclarinda cikacak kisa aciklama" },
+            { "label": "Footer Email", "name": "email", "widget": "string" },
+            { "label": "Footer Phone", "name": "phone", "widget": "string" },
+            { "label": "Footer Location", "name": "location", "widget": "string" }
+          ]
+        }
+      ]
+    }
+  ]
+}
 
-collections:
-  # VİDEOLAR / PROJELER
-  - name: "projects"
-    label: "Works (Projects)"
-    files:
-      - label: "Project List"
-        name: "project_list"
-        file: "_data/projects.json"
-        format: json
-        fields:
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
-            label_singular: "Project"
-            summary: "{{fields.title}}"
-            fields:
-              - label: "Title"
-                name: "title"
-                widget: "string"
-              - label: "Vimeo ID"
-                name: "vimeoId"
-                widget: "string"
-              - label: "Custom Thumbnail URL"
-                name: "thumbnail"
-                widget: "string"
-                required: false
-
-  # ABOUT SAYFASI
- - name: "about"
-    label: "About Page"
-    files:
-      - label: "About Page Content"
-        name: "about_content"
-        file: "_data/about.json"
-        format: json
-        fields:
-          - label: "Profile Photo"
-            name: "profile_image"
-            widget: "image"
-            required: false
-          - label: "Biography Text"
-            name: "bio_copy"
-            widget: "text"
-          - label: "Education"
-            name: "education"
-            widget: "list"
-            fields:
-              - {label: "Degree/Title", name: "title", widget: "string"}
-              - {label: "Institution", name: "institution", widget: "string"}
-              - {label: "Year", name: "year", widget: "string"}
-          - label: "Awards"
-            name: "awards"
-            widget: "list"
-            fields:
-              - {label: "Award Title", name: "title", widget: "string"}
-              - {label: "Festival/Organization", name: "organization", widget: "string"}
-          - label: "References"
-            name: "references"
-            widget: "list"
-            fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Company Role", name: "company_role", widget: "string"}
-              - {label: "Email", name: "email", widget: "string"}
-
-  # SEO VE GENEL AYARLAR
-  - name: "settings"
-    label: "SEO & General Settings"
-    files:
-      - label: "Site Settings"
-        name: "site_settings"
-        file: "_data/settings.json"
-        format: json
-        fields:
-          - label: "Site Title (SEO)"
-            name: "site_title"
-            widget: "string"
-          - label: "Site Description (SEO)"
-            name: "site_description"
-            widget: "text"
-            hint: "Google arama sonuçlarında çıkacak kısa açıklama"
-          - label: "Footer Email"
-            name: "email"
-            widget: "string"
-          - label: "Footer Phone"
-            name: "phone"
-            widget: "string"
-          - label: "Footer Location"
-            name: "location"
-            widget: "string"
-
-
+```
