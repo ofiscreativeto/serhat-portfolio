@@ -9,10 +9,7 @@
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-weight:400;-webkit-font-smoothing:antialiased;}
 a{color:inherit;text-decoration:none;}
 ul{list-style:none;margin:0;padding:0;}
-
-/* BURAYI DEĞİŞTİRDİK: Genel img kuralını kısıtladık */
-img { display: block; max-width: 100%; height: auto; }
-
+img{display:block;width:100%;}
 :focus-visible{outline:1px solid var(--fg);outline-offset:3px;}
 
 .site-header{display:flex;align-items:center;justify-content:space-between;padding:48px clamp(20px,5vw,64px) 32px;flex-wrap:wrap;gap:12px;}
@@ -28,11 +25,8 @@ img { display: block; max-width: 100%; height: auto; }
 
 .reel{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 24px;padding:40px clamp(20px,5vw,64px) 64px;}
 .frame{display:block;cursor:pointer;}
-
-/* BURAYI DEĞİŞTİRDİK: Thumbnail'i sabitledik */
-.thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#f0f0f0;width:100%;}
-.thumb img{width:100% !important;height:100% !important;object-fit:cover;transition:transform .4s ease;}
-
+.thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#f0f0f0;}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
 .frame:hover .thumb img{transform:scale(1.04);}
 .play-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;opacity:0;transition:opacity .25s ease;background:rgba(0,0,0,.38);}
 .frame:hover .play-overlay{opacity:1;}
@@ -43,7 +37,7 @@ img { display: block; max-width: 100%; height: auto; }
 .modal.open{display:flex;}
 .modal-inner{position:relative;width:100%;max-width:960px;aspect-ratio:16/9;background:#000;}
 .modal-inner iframe{width:100%;height:100%;border:none;display:block;}
-.modal-close{position:fixed;top:20px;right:24px;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;opacity:.7;transition:opacity .2s ease;padding:4px;}
+.modal-close{position:fixed;top:20px;right:24px;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;opacity:.7;transition:opacity .2s ease;line-height:1;padding:4px;}
 .modal-close:hover{opacity:1;}
 
 @media(max-width:900px){.reel{grid-template-columns:repeat(2,1fr);}}
