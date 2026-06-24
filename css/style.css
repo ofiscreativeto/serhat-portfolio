@@ -1,27 +1,3 @@
-.reel {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.thumb {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  overflow: hidden;
-  background: #f0f0f0;
-}
-
-.thumb img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 :root {
   --bg: #ffffff;
   --fg: #111111;
@@ -36,12 +12,31 @@ body {
 
 .reel {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 40px;
+  grid: repeat(3, 1fr) / auto;
+  gap: 20px;
+  padding: 20px;
 }
 
 .thumb img {
   width: 100%;
   display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal iframe {
+  width: 80%;
+  height: 80%;
+  border: none;
 }
