@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    files:
+      - label: "Project List"
+        name: "project_list"
+        file: "_data/projects.json"
+        format: json
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            label_singular: "Project"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                hint: "Hover'da görünecek proje adı"
+              - label: "Vimeo ID"
+                name: "vimeoId"
+                widget: "string"
+                required: false
+                hint: "vimeo.com/123456789 → sadece sayıyı yaz: 123456789"
+              - label: "Thumbnail URL"
+                name: "thumbnail"
+                widget: "string"
+                required: false
+                hint: "Görsel URL'si. Boş bırakırsan Vimeo'dan otomatik çekilir."
