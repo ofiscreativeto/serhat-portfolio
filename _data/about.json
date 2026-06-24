@@ -1,0 +1,68 @@
+{
+  "bio_copy": "Serhat is a Turkish-Canadian director and producer with a diverse background in film and advertising. With a proven track record of successfully managing simultaneous projects, coordinating large crews, and overseeing all aspects from pre-production to post-production, Serhat has demonstrated exceptional skills in the film and advertising industry. He has collaborated on successful projects for international clients and played a key role in the success of a nationally broadcasted TV series as a scriptwriter.",
+  "education": [
+    {
+      "title": "Postgraduate in TV Writing and Producing",
+      "institution": "Humber College · Toronto",
+      "year": "2020"
+    },
+    {
+      "title": "Bachelor's Degree in Scriptwriting",
+      "institution": "Dokuz Eylül University · Izmir, Turkey",
+      "year": "2013"
+    },
+    {
+      "title": "Associate Degree in Production Design",
+      "institution": "Akdeniz University · Antalya, Turkey",
+      "year": "2008"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Thriller — Intertwined",
+      "organization": "Altff Alternative Film Festival"
+    },
+    {
+      "title": "Best Micro-Short Film — Intertwined",
+      "organization": "Europe Independent Movie Festival"
+    },
+    {
+      "title": "Newcomer Arts Award",
+      "organization": "The Toronto Arts Foundation"
+    },
+    {
+      "title": "Best Screenplay — Ret (Rejection)",
+      "organization": "Sinepark Film Festival"
+    },
+    {
+      "title": "Best Short Play — Vatandaş",
+      "organization": "Suat Taşer Short Theatre Play Awards"
+    },
+    {
+      "title": "Best Short Play — Yangın Olur",
+      "organization": "Suat Taşer Short Theatre Play Awards"
+    }
+  ],
+  "references": [
+    {
+      "name": "Adeel Shamsi",
+      "company_role": "Imaginenation · Producer",
+      "email": "adeel@imaginenation.com"
+    },
+    {
+      "name": "Brian Ainsworth",
+      "company_role": "Humber College · Professor",
+      "email": "brainsworth1@rogers.com"
+    },
+    {
+      "name": "Roy Zheng",
+      "company_role": "Ofis Creative · Producer",
+      "email": "roy@ofiscreative.com"
+    },
+    {
+      "name": "Onur Sakman",
+      "company_role": "Edutainment · Producer",
+      "email": "Onurs@edutainment.com.tr"
+    }
+  ]
+}
