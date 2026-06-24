@@ -82,3 +82,18 @@ fetch('/_data/projects.json')
       .then(function(r) { return r.json(); })
       .then(function(data) { buildGrid(data.projects || []); });
   });
+fetch('/_data/settings.json')
+  .then(res => res.json())
+  .then(data => {
+    document.title = data.site_title;
+    
+    const desc = document.createElement('meta');
+    desc.name = 'description';
+    desc.content = data.site_description;
+    document.head.appendChild(desc);
+    
+    const keys = document.createElement('meta');
+    keys.name = 'keywords';
+    keys.content = data.keywords;
+    document.head.appendChild(keys);
+  });
