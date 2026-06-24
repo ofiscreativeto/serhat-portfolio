@@ -1,20 +1,19 @@
-:root {
-  --bg: #ffffff;
-  --fg: #111111;
-}
-
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--fg);
+  background: #ffffff;
+  color: #111111;
   font-family: sans-serif;
 }
 
 .reel {
   display: grid;
-  grid: repeat(3, 1fr) / auto;
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 40px;
+}
+
+.frame {
+  display: block;
 }
 
 .thumb img {
