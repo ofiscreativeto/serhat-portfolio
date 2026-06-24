@@ -1,6 +1,3 @@
-Bu hata tamamen gizli bosluk karakterleri ve girinti uyusmazligindan kaynaklaniyor. config.yml dosyasinin icini tamamen sil ve asagidaki kodu yapistir. Bosluk hatalarinin tekrarlanmamasi amaciyla ayni islevi goren JSON tabanli yapiyi kurdum.
-
-```json
 {
   "backend": {
     "name": "git\u002dgateway",
@@ -101,5 +98,3 @@ Bu hata tamamen gizli bosluk karakterleri ve girinti uyusmazligindan kaynaklaniy
     }
   ]
 }
-
-```
