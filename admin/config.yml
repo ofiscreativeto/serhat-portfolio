@@ -33,7 +33,7 @@ collections:
                 required: false
 
   # ABOUT SAYFASI
-  - name: "about"
+ - name: "about"
     label: "About Page"
     files:
       - label: "About Page Content"
@@ -41,6 +41,10 @@ collections:
         file: "_data/about.json"
         format: json
         fields:
+          - label: "Profile Photo"
+            name: "profile_image"
+            widget: "image"
+            required: false
           - label: "Biography Text"
             name: "bio_copy"
             widget: "text"
@@ -62,7 +66,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string"}
-              - {label: "Company & Role", name: "company_role", widget: "string"}
+              - {label: "Company Role", name: "company_role", widget: "string"}
               - {label: "Email", name: "email", widget: "string"}
 
   # SEO VE GENEL AYARLAR
