@@ -8,7 +8,6 @@
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);}
 a{color:inherit;text-decoration:none;}
 
-/* Grid (Anasayfa) Yapısı */
 .reel{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -16,20 +15,16 @@ a{color:inherit;text-decoration:none;}
   padding:40px 64px;
 }
 .frame{display:block;cursor:pointer;}
+
 .thumb{
   position:relative;
-  aspect-ratio:16/9;
-  overflow:hidden;
   background:#f0f0f0;
 }
 .thumb img{
   width:100%;
-  height:100%;
-  object-fit:cover;
   display:block;
 }
 
-/* Modal */
 .modal{
   display:none;
   position:fixed;
