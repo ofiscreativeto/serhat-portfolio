@@ -78,20 +78,19 @@
       ]
     },
     {
-      "name": "settings",
-      "label": "SEO & General Settings",
-      "files": [
-        {
-          "label": "Site Settings",
-          "name": "site_settings",
-          "file": "_data/settings.json",
-          "format": "json",
-          "fields": [
-            { "label": "Site Title (SEO)", "name": "site_title", "widget": "string" },
-            { "label": "Site Description (SEO)", "name": "site_description", "widget": "text", "hint": "Google arama sonuclarinda cikacak kisa aciklama" },
-            { "label": "Footer Email", "name": "email", "widget": "string" },
-            { "label": "Footer Phone", "name": "phone", "widget": "string" },
-            { "label": "Footer Location", "name": "location", "widget": "string" }
+  "name": "settings",
+  "label": "SEO",
+  "files": [
+    {
+      "label": "Site Settings",
+      "name": "site_settings",
+      "file": "_data/settings.json",
+      "format": "json",
+      "fields": [
+        { "label": "Site Title", "name": "site_title", "widget": "string" },
+        { "label": "Site Description", "name": "site_description", "widget": "text" },
+        { "label": "Keywords", "name": "keywords", "widget": "string", "hint": "Kelimeleri virgul ile ayir" },
+        { "label": "Social Image", "name": "og_image", "widget": "image" }
           ]
         }
       ]
