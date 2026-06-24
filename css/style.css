@@ -135,3 +135,53 @@ img{display:block;width:100%;}
   .bio-inner{flex-direction:column;}
   .portrait{width:120px;}
 }
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-left .mark {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header-left .role {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.site-header .nav {
+  margin-top: 40px;
+}
+
+.play-overlay {
+  opacity: 1 !important;
+  background: none !important;
+}
+
+.play-overlay svg {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.frame:hover .play-overlay svg {
+  opacity: 1;
+}
+
+.overlay-title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 1 !important;
+  transform: none !important;
+}
